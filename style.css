@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*Color*/
+    --tomato: hsl(4, 100%, 67%);
+    --dark-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+
+    /*Typography*/
+    --family: 'Roboto', sans-serif;
+    --fs-paragraph: 18px;
+    --weight-normal: 400;
+    --weight-bold: 700;
+}
+
+body {
+    background-color: var(--dark-grey);
+    font-family: var(--family);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--weight-normal);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner {
+    background-color: var(--white);
+    width: 65vw;
+    min-height: 65vh;
+    border-radius: 20px;
+    padding: 15px 15px 15px 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    margin-top: 6rem;
+    width: 45%;
+}
+
+.content__title {
+    font-size: 54px;
+    font-weight: var(--weight-bold);
+}
+
+.content__subtitle {
+    margin-top: 1.5rem;
+}
+
+.content__items {
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+.content__item {
+    padding-left: 40px;
+    position: relative;
+}
+
+.content__item+.content__item {
+    margin-top: 1rem;
+}
+
+.content__item::before {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-image: url(./assets/images/icon-list.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: -2px;
+}
+
+.content__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.content__label {
+    font-size: 14px;
+    font-weight: var(--weight-bold);
+}
+
+.content__input {
+    margin-top: 0.5rem;
+    padding: 10px 10px 10px 20px;
+    font-size: var(--fs);
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid #cbcbcb;
+}
+
+.content__input:focus {
+    border: 2px solid var(--dark-grey);
+}
+
+.content__input:focus:invalid {
+    color: var(--tomato);
+    border: 2px solid var(--tomato);
+    background-color: #FFE8E6;
+}
+
+.content__btn {
+    margin-top: 1.5rem;
+    padding: 15px 0;
+    font-size: var(--fs);
+    font-weight: var(--weight-bold);
+    color: var(--white);
+    background: linear-gradient(90deg, rgba(255, 83, 121, 1) 0%, rgba(255, 105, 60, 1) 100%);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
