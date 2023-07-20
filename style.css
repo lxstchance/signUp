@@ -128,3 +128,17 @@ body {
     border-radius: 7px;
     cursor: pointer;
 }
+
+.form__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    font-size: 1rem;
+    color: var(--tomato);
+}
+
+.btn-disabled {
+    opacity: 0.5;
+}

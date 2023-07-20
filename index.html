@@ -29,12 +29,14 @@
           <li class="content__item">Measuring to ensure updates are a success</li>
           <li class="content__item">And much more!</li>
         </ul>
-        <form class="content__form">
-          <label class="content__label" for="input-email">Email address</label>
-          <span class="error error-active">error</span>
+        <form class="content__form" novalidate>
+          <div class="form__content">
+            <label class="content__label" for="input-email">Email address</label>
+            <span class="error"></span>
+          </div>
           <input class="content__input" id="input-email" type="email" required minlength="5"
-            placeholder="email@company.com" validate>
-          <button class="content__btn">Subscribe to monthly newsletter</button>
+            placeholder="email@company.com">
+          <button class="content__btn btn-disabled" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
       <img src="./assets/images/illustration-sign-up-desktop.svg" alt="" class="image">
