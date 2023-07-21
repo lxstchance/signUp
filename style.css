@@ -116,7 +116,7 @@ body {
     background-color: #FFE8E6;
 }
 
-.content__btn {
+.btn {
     margin-top: 1.5rem;
     padding: 15px 0;
     font-size: var(--fs);
@@ -140,5 +140,43 @@ body {
 }
 
 .btn-disabled {
-    opacity: 0.5;
+    background: var(--dark-grey);
+}
+
+.sing-up_disabled {
+    display: none;
+}
+
+.message {
+    width: 27vw;
+    height: 60vh;
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message_disabled {
+    display: none;
+}
+
+.message__img {
+    width: 64px;
+    height: 64px;
+}
+
+.message__title {
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: var(--weight-bold);
+}
+
+.message__subtitle {
+    font-size: var(--fs-paragraph);
+    margin-top: 20px;
+}
+
+.bold {
+    font-weight: var(--weight-bold);
 }

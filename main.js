@@ -1,7 +1,13 @@
 const form = document.querySelector('.content__form');
 const emailInput = document.querySelector('.content__input');
 const errorSpan = document.querySelector('.error');
+
 const btn = document.querySelector('.content__btn');
+const btnSuccess = document.querySelector('.message__btn');
+
+const singUpInner = document.querySelector('.sing-up');
+const successInner = document.querySelector('.message');
+
 
 emailInput.addEventListener('input', function () {
     if (emailInput.validity.valid) {
@@ -37,5 +43,13 @@ function showError() {
 
 btn.addEventListener('click', function (evt) {
     evt.preventDefault();
-    console.log(emailInput.value)
+    console.log(emailInput.value);
+    singUpInner.classList.add('sing-up_disabled');
+    successInner.classList.remove('message_disabled');
+})
+
+btnSuccess.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    singUpInner.classList.remove('sing-up_disabled');
+    successInner.classList.add('message_disabled');
 })
